@@ -9,18 +9,18 @@ import android.os.Handler;
 public class SplashActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle savedInstance){
+        super.onCreate(savedInstance);
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
 
         final Intent i = new Intent(SplashActivity.this, MainActivity.class);
-        new Handler().postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable(){
             @Override
-            public void run() {
+            public void run(){
                 startActivity(i);
                 finish();
             }
-        }, 2000);
+        },1000);
     }
 }
